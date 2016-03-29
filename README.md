@@ -16,7 +16,17 @@ The **Java library** have general classes that can be used either to desktop as 
 The **Android library** have Android specific classes. The Android packages are described bellow: 
 
 # An example usage
-To give an overview of library operation will present an application example.
+To give an overview of library operation will present an application example. Let's imagine that Bob wants to develop a indoor tracking system based on intensity map of the magnetic field. Bob needs:
+
+1. A way to capture and create a fingerprinting map of the magnetic field intensity in the indoor enviroment (offline phase).
+2. A way to capture the current intensity of the magnetic field and find the position in the fingerprinting map with the greatest similarity with the newly captured measure (online phase).
+3. (Optionally) Bob wants to display the estimated position in a 2D map.
+ 
+All these three needs can be met using the jill library. How? Lets see now.
+
+For 1: A magnetic intensity signal is a double value. Bob can use the DoubleSignalSample from models.signal package in the java library to represent this data. In each map position, Bob can store many magnetic measures using the GeoMagneticSignalDataSet class from models.signal.datasets package. If Bob wanted to store another type of signal it could also create your own classes to represent theses values.
+ 
+
 
 # Where does Jill come from?
 
