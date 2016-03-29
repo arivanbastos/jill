@@ -6,6 +6,7 @@ It supports many types of systems, for example systems based on WiFi, images or 
 Jill have two main parts: a **Java library** and an **Android library**.
 
 The **Java library** have general classes that can be used either to desktop as mobile applications. The Java packages are described bellow:
+
 1. fitting: classes that perform curve fitting , predicting the behavior of the location system reference signals.
 2. outliers: classes that perform outliers removing from a set of signals.
 3. location: classes that perform the location using signals captured by sensors of the devices to identify their position.
