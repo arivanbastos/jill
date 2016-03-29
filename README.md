@@ -1,11 +1,11 @@
 # Java Indoor Location Library (JILL)
-Jill is a java library that allows experimenation and development of indoor location systems. 
+Jill is a java library that allows experimentation and development of indoor location systems. 
 It supports many types of systems, for example systems based on WiFi, images or magnetic signals.
 
 # Installation and use
 Jill have two main parts: a **Java library** and an **Android library**.
 
-The **Java library** have general classes that can be used either to desktop as mobile applications. The Java packages are described bellow:
+The **Java library** is a Eclipse project (java folder) and have general classes that can be used either to desktop as mobile applications. You can reference it through Eclispe or build a jar file to use in other IDEs or Android projects. The Java packages are described bellow:
 
 1. fitting: classes that perform curve fitting , predicting the behavior of the location system reference signals.
 2. outliers: classes that perform outliers removing from a set of signals.
@@ -13,7 +13,21 @@ The **Java library** have general classes that can be used either to desktop as 
 4. models: classes that represent the map where the location takes place. In this package are stored classes that represent the signals and signals datasets.
 5. utils: utility classes.
 
-The **Android library** have Android specific classes. The Android packages are described bellow: 
+The **Android library** have Android specific classes. You can use it to build Android applications. The Android folder contains the  library and the JILL application, wich allows you:
+
+1. Display your enviroment 2D map.
+2. Create reference objects and save them to map.
+3. Select a position, capture different types of signal measures and save those measures in the map associated with the respective position.
+3. See charts that display the captured signal data.
+4. Run locations algorithms and see the result in the map.
+
+A screenshot of the app can be views bellow:
+
+
+
+
+
+The Android packages are described bellow: 
 
 # An example usage
 To give an overview of library operation will present an application example. Let's imagine that Bob wants to develop a indoor tracking system based on intensity map of the magnetic field. Bob needs:
