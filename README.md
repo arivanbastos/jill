@@ -13,7 +13,7 @@ The **Java library** is a Eclipse project (java folder) and have general classes
 4. models: classes that represent the map where the location takes place. In this package are stored classes that represent the signals and signals datasets.
 5. utils: utility classes.
 
-The **Android library** have Android specific classes. You can use it to build Android applications. The Android folder contains the  library and the JILL application, wich allows you:
+The **Android library** have Android specific classes. You can use it to build Android applications. The Android folder contains the  library and the JILL app, which allows you:
 
 1. Display your enviroment 2D map.
 2. Create reference objects and save them to map.
@@ -21,13 +21,14 @@ The **Android library** have Android specific classes. You can use it to build A
 3. See charts that display the captured signal data.
 4. Run locations algorithms and see the result in the map.
 
-A screenshot of the app can be views bellow:
+The app currently can handle WiFi, BLE and magnetic field signals. But you can implement your own classes to handle other signals, like sound or image. A screenshot of the app can be views bellow:
 
+![alt text](https://raw.githubusercontent.com/arivanbastos/jill/master/www/images/app-screenshot.jpg "Android App Screenshot")
 
+The Android packages are described bellow:
 
-
-
-The Android packages are described bellow: 
+1. **location**: classes that make the glue between device sensors and location algorithms present inside java library location package.
+2. **sensors**: classes that access device sensors and store the data as models of java library models package.
 
 # An example usage
 To give an overview of library operation will present an application example. Let's imagine that Bob wants to develop a indoor tracking system based on intensity map of the magnetic field. Bob needs:
