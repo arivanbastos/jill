@@ -13,7 +13,7 @@ The **Java library** is a Eclipse project (java folder) and have general classes
 4. **models**: classes that represent the map (where the location takes place), signals and signals datasets.
 5. **utils**: utility classes.
 
-The **Android library** have Android specific classes. You can use it to build Android applications. The Android folder contains the  library and the JILL app, which allows you:
+The **Android library** have Android specific classes. You can use it to build Android applications. The Android folder contains also the JILL mobile app, which allows you:
 
 1. Display your enviroment **2D map**.
 2. Create **reference objects** and save them to map.
