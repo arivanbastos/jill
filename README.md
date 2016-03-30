@@ -7,19 +7,19 @@ Jill have two main parts: a **Java library** and an **Android library**.
 
 The **Java library** is a Eclipse project (java folder) and have general classes that can be used either to desktop as mobile applications. You can reference it through Eclispe or build a jar file to use in other IDEs or Android projects. The Java packages are described bellow:
 
-1. fitting: classes that perform curve fitting , predicting the behavior of the location system reference signals.
-2. outliers: classes that perform outliers removing from a set of signals.
-3. location: classes that perform the location using signals captured by sensors of the devices to identify their position.
-4. models: classes that represent the map where the location takes place. In this package are stored classes that represent the signals and signals datasets.
-5. utils: utility classes.
+1. **fitting**: classes that perform curve fitting , predicting the behavior of the location system reference signals.
+2. **outliers**: classes that perform outliers removing from a set of signals.
+3. **location**: classes that perform the location using signals captured by sensors of the devices to identify their position.
+4. **models**: classes that represent the map where the location takes place. In this package are stored classes that represent the signals and signals datasets.
+5. **utils**: utility classes.
 
 The **Android library** have Android specific classes. You can use it to build Android applications. The Android folder contains the  library and the JILL app, which allows you:
 
-1. Display your enviroment 2D map.
-2. Create reference objects and save them to map.
-3. Select a position, capture different types of signal measures and save those measures in the map associated with the respective position.
-3. See charts that display the captured signal data.
-4. Run locations algorithms and see the result in the map.
+1. Display your enviroment **2D map**.
+2. Create **reference objects** and save them to map.
+3. Select a** position**, **capture different types of signal** measures and **save** those measures in the map associated with the respective position.
+3. See **charts** that display the captured signal data.
+4. Run **locations algorithms** and see the result in the map.
 
 The app currently can handle WiFi, BLE and magnetic field signals. But you can implement your own classes to handle other signals, like sound or image. A screenshot of the app can be views bellow:
 
