@@ -47,7 +47,7 @@ So, how the enviroment signals will be gathered and stored in the map class? In 
  
 **Need 3**: The environment map can be represented by a simple JSON text and can be loaded using the models.serialize.MapSerializer class of the java library. A sample JSON map representation is presented bellow:
 
-```json
+```javascript
 {
  "color":"#F7EBB2",
  "length":15,
