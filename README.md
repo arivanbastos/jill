@@ -90,7 +90,7 @@ So, how the enviroment signals will be gathered and stored in the map class? In 
 ```
 
 # Where does Jill come from?
-It is part of a master's thesis in computer science at the Federal University of Bahia. The original work title is "Um sistema de localização indoor para smartphones baseado em WiFi e Bluetooth Low Energy".
+It is part of a master's thesis in computer science at the Federal University of Bahia. The original work title is "A Indoor Location System for Smartphones Based on WiFI and Bluetooth Low Energy", in portuguese "Um sistema de localização indoor para smartphones baseado em WiFi e Bluetooth Low Energy".
 
 # What is the current Jill status?
-The development is currently stopped, but you can be free to download , change and improve the library if desired.
+The development is currently stopped, but you are free to download , change and improve the library if desired.
