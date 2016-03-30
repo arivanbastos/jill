@@ -1,0 +1,251 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="90"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Map and Signal Points"
+                android:textSize="25dp"/>
+
+
+
+            <!-- Map -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="50"
+                android:background="#CCCCCC">
+                <br.com.arivanbastos.signalcaptor.views.MapView
+                    android:id="@+id/mapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <!-- Botoes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/gridTypeRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton android:id="@+id/localType"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Local"
+                        android:onClick="onGridTypeRadioButtonClicked"
+                        android:checked="true"
+                        />
+
+                    <RadioButton android:id="@+id/globalType"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Global"
+                        android:onClick="onGridTypeRadioButtonClicked"
+                        />
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="New Point"
+                        android:id="@+id/newPointButton"
+                        android:onClick="onNewPointTap"
+                        android:layout_marginLeft="2dp"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="New Object"
+                        android:id="@+id/newObjectButton"
+                        android:onClick="onNewObjectTap"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@id/newPointButton"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="Tracking Methods"
+                android:textSize="25dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text=""/>
+
+                <TextView
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="20"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Method Name"/>
+
+                <TextView
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="40"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Method Parameters"/>
+
+                <TextView
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Status"/>
+
+                <TextView
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Time"/>
+
+                <TextView
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Result"/>
+
+                <TextView
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Error"/>
+
+            </LinearLayout>
+
+            <!-- Methods -->
+            <LinearLayout
+                android:id="@+id/methodsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="15">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/methodsListView"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="Debug Info"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:id="@+id/debugText"
+                android:padding="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="15"
+                android:maxLines = "18"
+                android:scrollbars = "vertical"
+                android:gravity="bottom"
+                android:background="#000000"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp"/>
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:id="@+id/recordButtonContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Add Method"
+                    android:id="@+id/addMethodButton"
+                    android:layout_weight="1"
+                    android:onClick="onAddMethodTap"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Remove Method"
+                    android:id="@+id/removeMethodButton"
+                    android:layout_weight="1"
+                    android:onClick="onRemoveMethodTap"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Start Tracking"
+                    android:id="@+id/startTrackingButton"
+                    android:layout_weight="1"
+                    android:onClick="onStartTrackingTap"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"></LinearLayout>
+    </LinearLayout>
+</LinearLayout>

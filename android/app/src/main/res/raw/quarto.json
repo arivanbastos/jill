@@ -1,0 +1,17 @@
+{
+    "color":"#F7EBB2",
+    "length":5.0,
+    "scale":100.0,
+    "width":5.0,
+    "points":[],
+    "rooms":
+    [
+        {
+            "type":"rectangular",
+            "color":"#CCCCCC",
+            "label":"Quarto",
+            "id":"quarto",
+            "bounds":{"bottom":3.3,"left":0.0,"right":3.3,"top":0.0}
+         }
+     ]
+ }

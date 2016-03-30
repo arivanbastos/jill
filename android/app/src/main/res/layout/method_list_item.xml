@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="@drawable/table_border"
+            android:id="@+id/methodColor"
+            android:gravity="center"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/methodNameText"
+            android:background="@drawable/table_border"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_height="match_parent"
+            android:text="Method Name"/>
+
+        <TextView
+            android:id="@+id/methodParametersText"
+            android:background="@drawable/table_border"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="40"
+            android:layout_height="wrap_content"
+            android:text="Method Parameters"/>
+
+        <TextView
+            android:id="@+id/methodStatusText"
+            android:background="@drawable/table_border"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="match_parent"
+            android:text="Inactive"/>
+
+        <TextView
+            android:id="@+id/methodRunningTimeText"
+            android:background="@drawable/table_border"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="match_parent"
+            android:text="0ms"/>
+
+        <TextView
+            android:id="@+id/methodResultText"
+            android:background="@drawable/table_border"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:text="0.0x0.0"/>
+
+        <TextView
+            android:id="@+id/methodErrorText"
+            android:background="@drawable/table_border"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="match_parent"
+            android:text="0.0m"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,423 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="90"
+            android:orientation="vertical">
+        
+            <!-- Formulário -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:focusable="true" android:focusableInTouchMode="true"
+                    android:layout_width="0px" android:layout_height="0px"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                        <TextView
+                            android:text="Label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:id="@+id/labelText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:layout_weight="60"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:text="X"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
+                            android:orientation="horizontal">
+                            <EditText
+                                android:id="@+id/xText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:ems="10"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:text="Y"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
+                            android:orientation="horizontal">
+                            <EditText
+                                android:id="@+id/yText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:ems="10"/>
+                        </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/typeLabel"
+                            android:text="Signals"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_centerVertical="true"/>
+
+                        <TableLayout
+                            android:id="@+id/signalsTable"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <TableRow
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:text="Type"
+                                        android:background="@drawable/table_border"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="17"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:layout_centerVertical="true"/>
+
+                                    <TextView
+                                        android:text="Samples Count"
+                                        android:background="@drawable/table_border"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="17"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:layout_centerVertical="true"/>
+
+                                    <TextView
+                                        android:text="Used sources"
+                                        android:background="@drawable/table_border"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="66"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:layout_centerVertical="true"/>
+
+                            </TableRow>
+                        </TableLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="33"
+                    android:orientation="horizontal"
+                    android:focusableInTouchMode="true">
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/saveAfterFinish"
+                        android:checked="true"
+                        android:text="Save after finish"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="33"
+                    android:orientation="horizontal"
+                    android:focusableInTouchMode="true">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="Start"
+                            android:id="@+id/startButton"
+                            android:layout_weight="1"
+                            android:onClick="onStartTap"
+                            android:layout_marginLeft="20dp"/>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="Stop"
+                            android:id="@+id/stopButton"
+                            android:layout_weight="1"
+                            android:onClick="onStopTap"
+                            android:layout_marginLeft="20dp"
+                            android:enabled="false"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <!-- Gráfico -->
+            <LinearLayout
+                android:id="@+id/chartContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="60">
+
+                <TabHost
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tabHost"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"></TabWidget>
+
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent">
+
+                            <LinearLayout
+                                android:id="@+id/tab1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical"></LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical"></LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab3"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical"></LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+                </TabHost>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/chartDataLabel"
+                        android:text="Chart Data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"/>
+                    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/chartDataRadioGroup"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/chartDataLabel"
+                        android:orientation="horizontal">
+                        <RadioButton android:id="@+id/allPoints"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="All Points"
+                            android:onClick="onChartDataRadioButtonClicked"
+                            />
+                        <RadioButton android:id="@+id/currentPoint"
+                            android:layout_marginLeft="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Current Point"
+                            android:checked="true"
+                            android:onClick="onChartDataRadioButtonClicked"                            />
+                    </RadioGroup>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <!-- Dados -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="20"
+                android:orientation="horizontal">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableLayout
+                        android:id="@+id/dataTable"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <TableRow
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="Type"
+                                android:background="@drawable/table_border"
+                                android:layout_width="0dp"
+                                android:layout_weight="20"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_centerVertical="true"/>
+
+                            <TextView
+                                android:text="Source"
+                                android:background="@drawable/table_border"
+                                android:layout_width="0dp"
+                                android:layout_weight="35"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_centerVertical="true"/>
+
+                            <TextView
+                                android:text="Date"
+                                android:background="@drawable/table_border"
+                                android:layout_width="0dp"
+                                android:layout_weight="20"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_centerVertical="true"/>
+
+                            <TextView
+                            android:text="Count"
+                            android:background="@drawable/table_border"
+                            android:layout_width="0dp"
+                            android:layout_weight="15"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"/>
+
+                            <TextView
+                                android:text="Min"
+                                android:background="@drawable/table_border"
+                                android:layout_width="0dp"
+                                android:layout_weight="15"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_centerVertical="true"/>
+
+                            <TextView
+                                android:text="Max"
+                                android:background="@drawable/table_border"
+                                android:layout_width="0dp"
+                                android:layout_weight="15"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_centerVertical="true"/>
+
+                            <TextView
+                                android:text="Avg"
+                                android:background="@drawable/table_border"
+                                android:layout_width="0dp"
+                                android:layout_weight="15"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_centerVertical="true"/>
+
+                        </TableRow>
+                    </TableLayout>
+
+                </ScrollView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remove Point"
+                    android:id="@+id/removeButton"
+                    android:layout_weight="1"
+                    android:onClick="onRemoveTap"
+                    android:layout_marginLeft="20dp"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clear Data"
+                    android:id="@+id/clearButton"
+                    android:layout_weight="1"
+                    android:onClick="onClearTap"
+                    android:layout_marginLeft="20dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"></LinearLayout>
+    </LinearLayout>
+</LinearLayout>

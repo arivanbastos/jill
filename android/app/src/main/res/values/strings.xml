@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SignalCaptor</string>
+    <string name="newPointTitle">New/Edit Point</string>
+
+
+    <string name="ble_not_supported">BLE not supported!</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported!</string>
+    <string name="geomagnetic_sensor_error">Can\'t init geomagnetic sensor!</string>
+
+    <string name="error_data_folder">Can\'t create data folder!</string>
+    <string name="error_selected_device">Select a device!</string>
+    <string name="error_samples_count">Invalid samples count!</string>
+    <string name="error_invalid_coordinate">Invalid coordinate!</string>
+    <string name="scan_end">Scan end!</string>
+    <string name="unknown_device">Scan end!</string>
+    <string name="device_spinner_prompt">Select a device...</string>
+
+
+    <string name="action_settings">Settings</string>
+</resources>
