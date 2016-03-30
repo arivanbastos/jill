@@ -54,7 +54,13 @@ So, how the enviroment signals will be gathered and stored in the map class? In 
  "width":25,
  "scale":100.0",
  "rooms":[
-  {"type":"rectangular","id":"bedroom","label":"Beroom 1","color":"#ff99ff","bounds":{"bottom":4,"left":5,"right":9,"top":2}},
+  {
+   "type":"rectangular",
+   "id":"bedroom",
+   "label":"Bedroom 1",
+   "color":"#ff99ff",
+   "bounds":{"bottom":4,"left":5,"right":9,"top":2}
+  },
   ...
   ],
   "objects":[
